@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Uniplus | Global Education Consultancy</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lexend', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+            color: #725ed5;
+            padding: 240px 0 20px;
+            position: relative;
+            overflow: hidden;
+            /* min-height: 100vh; */
+        }
+        
+        /* .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+        } */
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-section h1 {
+            font-size: 5rem;
+            font-weight: bolder;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease;
+            font-family: 'Lexend', sans-serif;
+        }
+        
+        .hero-section .tagline {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 0px;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease;
+
+            color: #9786ef;
+            font-family: 'Fira Sans', sans-serif;
+
+
+        }
+        .hero-section .lead {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+
+        }
+
+
+
+        /* Font Families */
+/* .hero-title { font-family: 'Fira Sans', sans-serif !important; }
+h1, h2, h3, h4, h5, h6, .lead, .tagline { font-family: 'Lexend', sans-serif !important; }
+body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
+ */
+
+
+
+
+
+
+
+        
+        .stats-row {
+            margin-top: 60px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            animation: fadeInUp 1s ease;
+
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #8D7BE9 !important;
+            display: block;
+            margin-bottom: 10px;
+            font-family: 'Fira Sans', sans-serif;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            /* font-family: 'Fira Sans', sans-serif; */
+
+        }
+        
+        
+
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background: #f8f9fa;
+
+            /* animation: fadeInUp 1s ease; */
+       
+
+            
+        }
+
+        .about-section .container {
+                                                  animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 20% ;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #725ed5;
+            position: relative;
+            padding-bottom: 15px;
+                   animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40% ;
+        }
+.about-top-section .section-title::after {
+    left: 0 !important;
+    transform: none !important;
+}
+        
+        .section-title::after {
+
+                content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #a593ff, #a593ff);
+
+    transform: translateX(-50%);
+        }
+
+
+
+
+        
+        .about-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+                   animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40% ;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            margin-bottom: 30px;
+            border: 1px solid #e8e8e8;
+                   animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 20% ;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #8D7BE9, #8D7BE9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .feature-card h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #725ed5;
+    
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+
+
+        
+        
+        /* Founder Section */
+        .founder-section {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .founder-card {
+            background: linear-gradient(135deg, #8D7BE9 0%, #8D7BE9 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+                          animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40% ;
+        }
+
+
+        .founder-image-wrapper{
+    width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #8D7BE9;
+            margin: 0 auto 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+ .founder-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Makes the photo fill nicely */
+    border-radius: 50%; /* Keeps it round */
+}
+        
+        .founder-card h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .founder-card .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .founder-card p {
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        
+        /* Team Section */
+        .team-section {
+            padding: 100px 0;
+            background: #f8f9fa;
+  
+        }
+
+        .team-section .container {
+                                                  animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40% ;
+        }
+        
+        .team-card {
+            /* background: white; */
+            border-radius: 15px;
+            overflow: hidden;
+            /* box-shadow: 0 10px 40px rgba(0,0,0,0.08); */
+            transition: all 0.4s ease;
+            margin-bottom: 30px;
+                display: flex;
+    flex-direction: column;
+    align-items: center;
+                                      animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40% ;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+        
+        .team-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+
+
+        .team-image-wrapper{
+
+                        width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-top: 30px;
+            background: linear-gradient(135deg, #8D7BE9, #8D7BE9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+
+        }
+        .team-info {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .team-info h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #5545aa;
+            margin-bottom: 5px;
+        }
+        
+        .team-info .role {
+            color: #8D7BE9;
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        .team-info p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        /* Values Section */
+        .values-section {
+            padding: 100px 0;
+            background: white;
+                                      animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40% ;
+        }
+        
+        .value-item {
+            text-align: center;
+            padding: 40px 20px;
+                                      animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40% ;
+            
+        }
+        
+        .value-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #8D7BE9, #8D7BE9);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.5rem;
+            color: white;
+            transform: rotate(45deg);
+        }
+        
+        .value-icon i {
+            transform: rotate(-45deg);
+        }
+        
+        .value-item h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #8D7BE9;
+            margin-bottom: 15px;
+        }
+        
+        .value-item p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #8D7BE9 0%, #8D7BE9 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+                                      animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 10% ;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+                                      animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 10% ;
+        }
+        
+        .btn-custom {
+            background: white;
+            color: #8D7BE9;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            border: none;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+                                      animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 10% ;
+        }
+        
+        .btn-custom:hover {
+            background: #8D7BE9;
+            color: white;
+            transform: scale(1.05);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .faq-section {
+    background: #ffffff;
+    padding: 100px 0;
+                       animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40% ;
+}
+
+
+
+
+/* Card Style */
+.faq-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 0;
+    box-shadow: 0 10px 30px rgba(194, 150, 252, 0.08);
+                       animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30% ;
+}
+
+/* Accordion Button */
+.accordion-button {
+    background: #fff;
+    border-radius: 8px !important;
+    padding: 22px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #3f3e3e;
+    box-shadow: none !important;
+                    
+}
+
+/* Remove default arrow */
+.accordion-button::after {
+    background-image: none !important;
+    content: '+';
+    font-size: 1.7rem;
+    color: #0c1b3b;
+}
+
+/* When opened */
+.accordion-button:not(.collapsed)::after {
+    content: '−';
+    color: #000000;
+    background: transparent;
+    width: 28px;
+    height: 28px;
+    border-radius: 2px;
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
+}
+
+/* Accordion Body */
+.accordion-body {
+    padding: 0 25px 25px;
+    padding-top: 20px !important;
+    color: #4a4a4a;
+    font-size: 0.95rem;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.students-community {
+    background: #ffffff;
+        padding: 100px 0;
+                       animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40% ;
+}
+
+/* .community-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #0d1b35; 
+    line-height: 1.2;
+} */
+
+.community-text {
+    font-size: 1.2rem;
+    color: #666; /* Soft dark gray */
+    line-height: 1.8;
+                animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40% ;
+}
+
+.community-img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+                animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40% ;
+}
+
+/* Optional smooth spacing for mobile */
+@media (max-width: 767px) {
+    .community-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .community-text {
+        text-align: center;
+    }
+}
+
+
+
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+
+                @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(300px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section .tagline {
+                font-size: 1.1rem;
+            }
+
+                   .hero-section {
+    
+            padding: 80px 0 20px;
+        
+            /* min-height: 100vh; */
+        }
+        
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+
+        .stats-row {
+            margin-top: 10px !important;
+        }
+
+
+        .stat-item{
+            padding: 5px !important;
+
+        }
+
+
+                .values-section {
+            padding: 30px 0;
+            background: white;
+                                      animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 20% ;
+        }
+  
+            
+            .section-title {
+                font-size: 2rem;
+            }
+
+                  /* .values-section  .section-title::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 80px;
+                    height: 4px;
+                    background: linear-gradient(90deg, #a593ff, #a593ff);
+
+                    transform: translateX(-50%);
+                        } */
+
+
+
+
+.section-title {
+    position: relative;
+    display: inline-block;   /* Ensure the after-element aligns correctly */
+}
+
+/* .team-section .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #a593ff, #a593ff);
+
+    transform: translateX(-50%);
+} */
+
+
+
+
+
+
+        .founder-section {
+            padding: 30px 0;
+            background: white;
+        }
+
+
+
+
+
+         .team-section {
+            padding: 30px 0;
+            background: #f8f9fa;
+  
+        }
+
+        .team-section .container {
+                                                  animation: fadeUp linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 20% ;
+        }
+            
+            .founder-card {
+                padding: 30px;
+            }
+
+            .about-section{
+                padding: 30px 0 !important;
+            }
+
+
+
+                    .cta-section h2 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+   
+        }
+
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1>Your Truly Global University Counselor</h1>
+                    <p class="tagline">Calling all ambitious thinkers. Learn how to think – not what to think.</p>
+                    <!-- <p class="lead">Your truly global university counselor with access to 1000+ universities and 42,000+ courses from 60 different countries</p> -->
+                </div>
+            </div>
+            
+            <!-- <div class="row stats-row">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Universities</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <span class="stat-number">42,000+</span>
+                        <span class="stat-label">Courses</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <span class="stat-number">60+</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Global Offices</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+        <section class="stats-section py-5 bg-white shadow-sm border-bottom">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4 mb-md-0 stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="stat-number fw-bold text-primary">1000+</h2>
+                    <p class="stat-label text-muted">University Partnerships</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0 stat-item border-start border-end" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="stat-number fw-bold text-primary">42,000+</h2>
+                    <p class="stat-label text-muted">Courses & Programs</p>
+                </div>
+                <div class="col-md-4 stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <h2 class="stat-number fw-bold text-primary">60+</h2>
+                    <p class="stat-label text-muted">Countries Represented</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- About Section -->
+    <section class="about-section about-top-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="section-title">Unlock Your Potential with Greendome</h2>
+                    <div class="about-content">
+                        <p>Established in 2022 in London, the GREENDOME Company leverages the founder's 20-year experience in scholarship and academic studies relevant to modern youth.</p>
+                        <p>We are an education and consulting company based in London, UK, providing current and future students with consultations and preparations for living in Britain, as well as academic admissions, courses, and training.</p>
+                        <p>Our team members have extensive experience in communicating with British universities, and we are committed to providing exceptional services to students from around the world who plan to study in the UK.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h4>Expert Guidance</h4>
+                                <p>20+ years of experience in academic counseling and university admissions</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <h4>Global Reach</h4>
+                                <p>Access to universities across 60 countries worldwide</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h4>Comprehensive Support</h4>
+                                <p>From admissions to accommodation and beyond</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h4>Proven Success</h4>
+                                <p>Thousands of successful student placements</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title d-inline-block">Why Choose Greendome</h2>
+                    <p class="mt-3" style="font-size: 1.2rem; color: #666;">Choosing the right education and consulting company can make a significant difference in a student's academic journey. At Greendome, we are committed to providing exceptional services that go beyond what our competitors offer.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Honesty & Credibility</h4>
+                        <p>We believe in transparency and honesty in our interactions. We provide accurate and up-to-date information and are committed to building long-term relationships based on trust.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Student-Centered Approach</h4>
+                        <p>We understand that every student has unique needs and goals. We work closely with them to ensure their needs are met and help them achieve their full potential.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Exceptional Service</h4>
+                        <p>Our team members are experts with extensive experience in scholarship and academic studies. We provide comprehensive guidance from start to finish.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="founder-card">
+                        <div class="text-center">
+                            <div class="founder-image-wrapper">
+                                <!-- <i class="fas fa-user-tie"></i>
+                                <img src="profile.jpg" class="founder-image" alt=""> -->
+                                <img src="handsome-happy-bearded-man.jpg" class="founder-image" alt="">
+
+                            </div>
+
+                            <h3>Abdullah Mohammed Aljumaah</h3>
+                            <p class="title">Founder & Director</p>
+                        </div>
+                        <p>Our company is founded by Mr. Abdullah Mohammed Aljumaah, a highly experienced professional with a career spanning over twenty years. Mr. Abdullah Aljumaah has worked as a counselor at the Saudi Cultural Bureau in London and as the director of the office of the Deputy Minister of Higher Education.</p>
+                        <p>He has also worked as a cultural attaché in Oman and as a supervising academic in Dubai. Prior to that, he held various positions in the Ministry of Information before moving to the office of the Minister of Higher Education during the era of Dr. Khalid bin Mohammed Al-Anqari.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title d-inline-block">Our Team</h2>
+                    <p class="mt-3" style="font-size: 1.2rem; color: #666;">At Greendome, our team is your team. With years of experience and in-depth knowledge of the academic landscape in the UK, our dedicated professionals work tirelessly to provide unparalleled support and guidance to students.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-image-wrapper">
+                            <img src="handsome-happy-bearded-man.jpg" class="team-image" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h4>Abdullah Aljumaah</h4>
+                            <p class="role">Director</p>
+                            <!-- <p>Provides strategic leadership and vision for the entire organization, overseeing all operations and setting institutional goals.</p> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                     <div class="team-image-wrapper">
+                            <img src="handsome-happy-bearded-man.jpg" class="team-image" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h4>Bashir Khan</h4>
+                            <p class="role">Consultant</p>
+                            <!-- <p>Leverages specialized expertise to advise on critical projects, efficiency improvements, and policy development.</p> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                       <div class="team-image-wrapper">
+                            <img src="handsome-happy-bearded-man.jpg" class="team-image" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h4>Nadia Alharthy</h4>
+                            <p class="role">Students Advisor</p>
+                            <!-- <p>Dedicated to supporting the academic and personal success of students, providing guidance on course selection and career planning.</p> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <!-- <div class="team-image">
+                            <i class="fas fa-user"></i>
+                        </div> -->
+                        <div class="team-image-wrapper">
+                            <img src="handsome-happy-bearded-man.jpg" class="team-image" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h4>Osama Arman</h4>
+                            <p class="role">Accountant</p>
+                            <!-- <p>Manages the organization's financial records, transactions, and reporting, ensuring financial compliance and stability.</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="students-community py-5">
+    <div class="container">
+        <div class="row align-items-start mb-4">
+
+            <!-- Left Title -->
+            <div class="col-lg-4 mb-3 mb-lg-0 mx-auto text-center">
+                <h2 class="section-title d-inline-block">
+                    Our student's <br> community
+                </h2>
+            </div>
+
+            <!-- Right Text -->
+            <div class="col-lg-8">
+                <p class="community-text mb-4">
+                    At study abroad, we foster a supportive and inclusive relationship with our students that 
+                    extends beyond ensuring quality education. Our team of independent consultants thrives on 
+                    nurturing a friendly relationship with student events after their graduation. Through 
+                    regular events, workshops, and fun activities we cultivated a long-lasting relationship.
+                </p>
+
+                 <div class="row g-4">
+            <div class="col-md-6">
+                <img src="handsome-happy-bearded-man.jpg" class="img-fluid community-img" alt="">
+            </div>
+
+            <div class="col-md-6">
+                <img src="handsome-happy-bearded-man.jpg" class="img-fluid community-img" alt="">
+            </div>
+        </div>
+
+                
+            </div>
+        </div>
+
+        <!-- Image Row -->
+       
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Additional Section (Content to be added later) -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title d-inline-block">Our Commitment</h2>
+                    <p class="mt-4" style="font-size: 1.2rem; color: #666; line-height: 1.8;">At Greendome, we are committed to providing the best possible support and guidance to our students. We understand that every student has unique needs and goals, and we work closely with them to ensure that their needs are met. We are dedicated to helping our students achieve their full potential and are committed to providing them with the resources and support they need to succeed.</p>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h4 class="mt-3" style="color: #1e3c72;">Academic Excellence</h4>
+                    <p style="color: #666;">Guiding students to top-tier universities and programs that match their aspirations.</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h4 class="mt-3" style="color: #1e3c72;">Accommodation Support</h4>
+                    <p style="color: #666;">Comprehensive assistance with finding safe and comfortable housing arrangements.</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4 class="mt-3" style="color: #1e3c72;">Career Guidance</h4>
+                    <p style="color: #666;">Helping students navigate their career paths and achieve their professional goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="faq-section py-5">
+    <div class="container">
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title d-inline-block">Frequently asked questions</h2>
+                    <p class="mt-4" style="font-size: 1.2rem; color: #666; line-height: 1.8;">At Greendome, we are committed to providing the best possible support and guidance to our students. We understand that every student has unique needs and goals, and we work closely with them to ensure that their needs are met. We are dedicated to helping our students achieve their full potential and are committed to providing them with the resources and support they need to succeed.</p>
+                </div>
+            </div>
+
+        <div class="row g-4 mt-5">
+            <!-- Left Column -->
+            <div class="col-lg-6">
+
+                <!-- Item 1 -->
+                <div class="faq-card mb-3">
+                    <div class="accordion accordion-flush" id="faqLeft1">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                    What destinations are available for international studies?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqLeft1">
+                                <div class="accordion-body">
+                                    We offer several universities and schools in the following English-speaking countries: the UK, USA, Ireland, the Netherlands, Australia, and New Zealand.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="faq-card mb-3">
+                    <div class="accordion accordion-flush" id="faqLeft2">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+                                    Is the English language test mandatory for university admission?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqLeft2">
+                                <div class="accordion-body">
+                                    We offer several universities and schools in the following English-speaking countries: the UK, USA, Ireland, the Netherlands, Australia, and New Zealand.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="faq-card mb-3">
+                    <div class="accordion accordion-flush" id="faqLeft3">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+                                    Who are your partner universities?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqLeft3">
+                                <div class="accordion-body">
+                                    We offer several universities and schools in the following English-speaking countries: the UK, USA, Ireland, the Netherlands, Australia, and New Zealand.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-lg-6">
+
+                <!-- Item 4 (Opened Example) -->
+                <div class="faq-card mb-3">
+                    <div class="accordion accordion-flush" id="faqRight1">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq4">
+                                    What kind of courses do your universities and colleges offer abroad?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse show" data-bs-parent="#faqRight1">
+                                <div class="accordion-body">
+                                    We offer several academic programs abroad (High School, Bachelor's,
+                                    Master's, and Ph.D.) in the UK, USA, Ireland, Netherlands, Australia,
+                                    and New Zealand. Fees vary depending on the program and institution.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="faq-card mb-3">
+                    <div class="accordion accordion-flush" id="faqRight2">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq5">
+                                    Is university admission guaranteed?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqRight2">
+                                <div class="accordion-body">
+                                    We offer several universities and schools in the following English-speaking countries: the UK, USA, Ireland, the Netherlands, Australia, and New Zealand.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="faq-card mb-3">
+                    <div class="accordion accordion-flush" id="faqRight3">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq6">
+                                    Do I get a work permit after I graduate?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqRight3">
+                                <div class="accordion-body">
+                                    We offer several universities and schools in the following English-speaking countries: the UK, USA, Ireland, the Netherlands, Australia, and New Zealand.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Ready to Start Your Journey?</h2>
+                    <p>Let us guide you to academic success with our expert consultation services</p>
+                    <a href="#" class="btn-custom">Get Started Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
