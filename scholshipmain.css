@@ -1,0 +1,506 @@
+
+
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+    html, body {
+      font-family: "Fira Sans Condensed";
+      /* font-weight: 400; */
+      line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+
+
+
+    @font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('fonts/Gilroy-Bold.woff2') format('woff2'),
+         url('fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+    .admission-banner {
+      background: #413190; /* Purple */
+      color: white;
+      font-weight: 700;
+      text-align: center;
+      padding: 8px 0;
+      font-size: clamp(0.8rem, 1vw,1.3rem);
+    }
+    .navbar-nav .nav-link {
+      font-weight: 600 !important;
+      padding: 0.8rem 1rem;
+      color: #000000;
+      margin: 0.7rem 0.7rem !important;
+ 
+      font-family: "Fira Sans Condensed" !important;
+
+    }
+
+
+
+    .apply{
+
+        background-color: #8D7BE9 !important;
+        color: #FFFFFF !important;
+        border-radius: 0px !important;
+        padding: 10px 25px !important;
+                font-weight: 700 !important;
+        font-size: 1rem !important;
+
+    }
+
+
+.top{
+       display: flex;
+        /* border: 1px solid red; */
+        justify-content: end;
+
+    }
+
+    .top-bar{
+       
+        width: max-content;
+        /* margin-left: auto;  */
+        background-color: #F0F0F0;
+   
+        /* width: 100%; */
+    }
+    .top-bar .btn-link{
+        font-weight: 700 !important;
+        font-size: 1rem !important;
+        color: #5544AA;
+        padding: 10px 25px !important;
+       
+    }
+
+
+
+
+
+
+
+
+    @media (max-width:410px) {
+
+
+
+
+    .apply{
+
+        background-color: #8D7BE9;
+        color: #FFFFFF;
+        border-radius: 0px !important;
+        padding: 10px 25px !important;
+                font-weight: 700 !important;
+        font-size: 0.2rem !important;
+
+    }
+
+    
+
+    .top-bar .btn-link{
+        font-weight: 700 !important;
+        font-size: 0.4rem !important;
+        color: #5544AA;
+        padding: 10px 5px !important;
+       
+    }
+
+
+
+    
+.card-3 {
+   top: 0px !important; left: 50% !important; 
+  transform: translateX(-50%) !important;
+
+  margin-top: 20px !important;
+
+   }
+
+
+
+
+
+
+
+  
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+/* Remove Bootstrap's default caret */
+.navbar .dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Custom dropdown icon */
+.navbar .dropdown-icon {
+  margin-left: 5px;
+  color: rgb(220, 53, 53); /* make icon red */
+  transition: transform 0.3s ease;
+  font-size: 12px;
+}
+
+/* Rotate when dropdown is open */
+.dropdown.show .dropdown-toggle .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+
+
+
+
+
+
+
+/* Default dropdown look */
+.dropdown-menu {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+
+
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+
+
+  .navbar-nav .nav-link {
+      font-weight: 600 !important;
+      padding: 0.5rem 0.8rem !important;
+      color: #000000;
+      margin: 0.5rem 0.5rem !important;
+    }
+
+
+
+    .apply{
+
+        background-color: #8D7BE9 !important;
+        color: #FFFFFF;
+        border-radius: 0px !important;
+        padding: 8px 20px !important;
+                font-weight: 700 !important;
+        font-size: 0.8rem !important;
+
+    }
+
+
+
+    .top-bar .btn-link{
+        font-weight: 700 !important;
+        font-size: 0.8rem !important;
+        color: #5544AA !important;
+        padding: 10px 25px !important;
+       
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.privacy-policy {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    color: #333;
+    font-family: "Fira Sans Condensed", sans-serif;
+}
+
+.privacy-policy .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.privacy-policy .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #8D7BE9; /* your violet color */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.privacy-policy .section-subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.privacy-policy .policy-content ol {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.privacy-policy .policy-content li {
+    margin-bottom: 20px;
+}
+
+.privacy-policy .policy-content li strong {
+    color: #8D7BE9;
+}
+
+.privacy-policy .policy-content li a {
+    color: #8D7BE9;
+    text-decoration: none;
+}
+
+.privacy-policy .policy-content li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-section {
+  background-color: #f8fbff;
+  font-family: 'Lexend', sans-serif;
+  padding: 40px 0 20px;
+  color: #0b0b45;
+
+}
+
+.footer-nav .nav-link {
+  color: #041CA7;
+  font-weight: 400;
+  margin: 0 0.2rem !important;
+  transition: color 0.3s ease;
+  font-size: clamp(0.8rem,1.3vw,1.3rem);
+}
+
+
+@media (max-width:476px) {
+
+  .footer-nav .nav-link {
+
+  margin: 0px !important;
+
+  padding: 5px 8px;
+
+  font-size: 0.7rem;
+}
+
+.privacyside{
+  margin-top: 10px !important;
+}
+
+
+  
+}
+
+.footer-nav .nav-link:hover {
+  color: #5a3dff;
+}
+
+.footer-contact p {
+  margin: 15px ;
+  font-weight: 400;
+  color: #040463;
+  font-size: clamp(1rem,1.3vw,1.3rem);
+}
+
+.footer-contact i {
+  color: #0BD0D0;
+  margin-right: 6px;
+}
+
+.footer-bottom {
+  background-color: #8D7BE9;
+  border-radius: 40px;
+  padding: 15px 25px;
+  color: #fff;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer-social a {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  margin: 0 6px;
+  padding: 9px 13px;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  background: #f1f1f1;
+  color: #5a3dff;
+}
+
+.footer-info p {
+  margin: 0;
+  font-size: clamp(13px,1vw,16px) !important;
+  font-weight: 300 !important;
+}
+
+.privacyside a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: 300 !important;
+  font-size: clamp(13px,1vw,16px) !important;
+
+
+}
+
+.privacyside {
+    color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: 300 !important;
+
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  margin: 0 5px;
+  
+}
+
+
+
