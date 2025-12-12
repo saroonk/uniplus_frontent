@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scholarship Detail Page - MOE Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="scholar1.css">
+
+     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p1Cmj8a9fT+uKmxP0tEw+6QHcEoj8Ih2+gS7f1l3YnTnZRt6kvR+9xHZKjYhXRM0+N6R5aQ+3l1yT3Jqk5YdPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-pVwzX5u+lB0J6fnrP6HT3hF+fGnqj6Z3Zf4D7i5QyQ+ZTz1VvZyG1+XQ7FzVb8f0U+uZ+kf0T0jV8mZfXzKxQA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!-- <link rel="stylesheet" href="{% static 'css/scholarship.css' %}">
+      -->
+    <!-- <link rel="stylesheet" href="scholshipmain.css"> -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#8D7BE9", // New theme purple
+              "primary-hover": "#7665c7", // Darker purple for hover
+              "background-light": "#ffffff", // Clean white
+              "background-dark": "#000000", // Deep black
+              "surface-light": "#ffffff",
+              "text-primary": "#111111", // Sharp black text
+              "text-secondary": "#666666", // Neutral gray text
+              "royal-green": "#000000", // Remapped 'royal' accents to Black for the new theme
+              "border-light": "#e5e7eb", // Cool gray border
+              "surface-subtle": "#f9fafb", // Very light gray for backgrounds
+            },
+            fontFamily: {
+              "display": ["Spline Sans", "sans-serif"],
+              "body": ["Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "1.5rem", "xl": "2rem", "2xl": "2.5rem", "full": "9999px"},
+            boxShadow: {
+                'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                'card': '0 0 0 1px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.04)',
+                'glow': '0 0 15px rgba(141, 123, 233, 0.3)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+  
+::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }html {
+            scroll-behavior: smooth;
+        }.bg-pattern {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+                /* body {
+            font-family: 'Fira Sans', sans-serif;
+            background: #f5f7fb;
+            color: #333;
+        } */
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-dark antialiased selection:bg-primary/30">
+
+
+
+
+      
+
+<div class="container-fluid top">
+  <div class="d-flex  top-bar  ">
+  <!-- <a href="/faculty" class="btn btn-link text-decoration-none">FACULTY PORTAL</a>
+  <a href="/student" class="btn btn-link text-decoration-none ">STUDENT PORTAL</a> -->
+  <a href="{% url 'contact' %}" class="btn btn-link text-decoration-none ">ENQUIRE NOW</a>
+  <a href="{% url 'courses' %}" class="btn  apply">APPLY NOW</a>
+</div>
+</div>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container-fluid">
+    <!-- Brand (Logo or Name) -->
+    <!-- <a class="navbar-brand fw-bold" href="/">MyUniversity</a> -->
+
+
+    <a class="navbar-brand logo-container" href="{% url 'index' %}">
+    <img src="{% static 'images/unpluslogo.jpeg' %}" alt="MyUniversity Logo" class="logo">
+</a>
+
+
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+ 
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+
+        <li class="nav-item ">
+          <a class="nav-link " href="{% url 'index' %}" >Home</a>
+         
+
+        </li>
+      
+        <li class="nav-item ">
+          <a class="nav-link " href="{% url 'aboutus' %}">About</a>
+
+        </li>
+
+
+ <li class="nav-item dropdown d-flex align-items-center" style="gap: 0;">
+  <!-- Clickable Programs text -->
+  <a class="nav-link" href="{% url 'programdetails' %}" style="padding-right: 0 !important; margin-right: 0 !important;">
+    Programs
+  </a>
+
+  <!-- Dropdown toggle icon -->
+  <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" 
+     style="padding-left: 0 !important; margin-left: 0 !important; display: flex; align-items: center;">
+    <i class="fa-solid fa-chevron-down dropdown-icon" style="cursor: pointer; font-size: 0.75rem;"></i>
+  </a>
+
+  <ul class="dropdown-menu">
+    {% for c in course %}
+      <li>
+        <a class="dropdown-item" href="{% url 'course_search' %}?program={{ c.slug }}">
+          {{ c.category_name }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</li>
+
+
+
+
+
+                <!-- <li class="nav-item ">
+          <a class="nav-link " href="{% url 'scholarship' %}">Scholarship</a>
+
+        </li> -->
+
+
+
+
+        <li class="nav-item dropdown d-flex align-items-center" style="gap: 0;">
+  <!-- Clickable Programs text -->
+  <a class="nav-link" href="{% url 'scholar' %}" style="padding-right: 0 !important; margin-right: 0 !important;">
+    Scholarships
+  </a>
+
+  <!-- Dropdown toggle icon -->
+  <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" 
+     style="padding-left: 0 !important; margin-left: 0 !important; display: flex; align-items: center;">
+    <i class="fa-solid fa-chevron-down dropdown-icon" style="cursor: pointer; font-size: 0.75rem;"></i>
+  </a>
+
+  <ul class="dropdown-menu">
+    {% for c in course %}
+      <li>
+        <a class="dropdown-item" href="{% url 'course_search' %}?program={{ c.slug }}">
+          {{ c.category_name }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</li>
+
+
+
+
+       
+
+
+
+
+
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Media<i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">News</a></li>
+            <li><a class="dropdown-item" href="#">Gallery</a></li>
+          </ul>
+        </li> -->
+
+        <li class="nav-item">
+          <a href="{% url 'universitylisting' %}" class="nav-link">Universities</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link " href="{% url 'contact' %}" > Contacts</a>
+          <!-- <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'contact' %}">Contact Form</a></li>
+            <li><a class="dropdown-item" href="#">Offices</a></li>
+          </ul> -->
+        </li>
+
+
+
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Language<i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">English</a></li>
+            <li><a class="dropdown-item" href="#">Arabic</a></li>
+          </ul>
+        </li> -->
+
+
+        
+
+
+
+          <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+    <!-- {% trans "Language" %} -->
+
+            <i class="flag-icon flag-icon-sa"></i> Arabic
+
+    <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end">
+
+{% if request.LANGUAGE_CODE == 'ar' %}
+     <li><a class="dropdown-item" href="{% url 'set_language' 'ar' %}?next={{ request.get_full_path }}" >{% trans 'Arabic' %}</a></li>
+    <li><a class="dropdown-item" href="{% url 'set_language' 'en' %}?next={{ request.get_full_path }}" >{% trans 'English' %}</a></li>
+ {% else %}
+    <li><a class="dropdown-item" href="{% url 'set_language' 'en' %}?next={{ request.get_full_path }}" >{% trans 'English' %}</a></li>
+    <li><a class="dropdown-item" href="{% url 'set_language' 'ar' %}?next={{ request.get_full_path }}" >{% trans 'Arabic' %}</a></li>
+{% endif %}
+  </ul>
+</li>
+
+
+
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+<div class="flex flex-col min-h-screen">
+
+<div class="relative bg-white overflow-hidden">
+<div class="absolute inset-0 z-0 bg-pattern opacity-40 pointer-events-none"></div>
+<div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/10 to-transparent pointer-events-none"></div>
+<div class="px-6 xl:px-40 flex justify-center py-12 relative z-10">
+<div class="flex flex-col lg:flex-row gap-12 max-w-[1280px] flex-1 items-center">
+<div class="flex-1 space-y-6 px-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-royal-green border border-gray-200">
+<span class="material-symbols-outlined text-sm">public</span>
+<span class="text-xs font-bold tracking-wide uppercase">Vision 2030 • International Study</span>
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-primary leading-[1.1] tracking-tight">
+                            Scholarship for an <span class="relative whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-royal-green to-primary">
+                                Accompanying Person
+                                <svg class="absolute w-full h-3 -bottom-1 left-0 text-primary -z-10" preserveAspectRatio="none" viewBox="0 0 100 10">
+<path d="M0 5 Q 50 10 100 5" fill="none" opacity="0.4" stroke="currentColor" stroke-width="8"></path>
+</svg>
+</span>
+</h1>
+<p class="text-lg text-text-secondary max-w-2xl leading-relaxed">
+                            Enhance your family’s academic journey. Support for spouses and legal guardians to pursue higher education while accompanying a primary scholarship student abroad.
+                        </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="flex items-center gap-2 h-12 px-8 rounded-full bg-primary hover:bg-primary-hover text-white font-bold text-base transition-all transform hover:-translate-y-0.5 shadow-lg shadow-primary/25">
+<span>Explore Programs</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+<!-- <button class="flex items-center gap-2 h-12 px-8 rounded-full bg-white border border-gray-200 hover:border-primary/50 hover:bg-primary/5 text-text-primary font-medium text-base transition-colors">
+<span class="material-symbols-outlined text-xl">download</span>
+<span>Download Guide</span>
+</button> -->
+</div>
+</div>
+<div class="w-full lg:w-[480px] px-4">
+<div class="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl shadow-primary/10 group border border-gray-100">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+<img alt="Graduates walking on campus grounds" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105 saturate-[0.8]" data-alt="Diverse group of university students walking on a modern campus with green trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOH2Rgxvtd8dlOAsV7ngLS7iuBxWI7ProU8B2exk6Jb8jh-6kcWRqpGKBYeVfOm32z_4rb-9BK_id1Hm8_qFpaz-L0LDwhNWJJ4uHQFtDVRx9PXXuOo1CGm9LpJVSOe5ItxNLY7gd-4AUAI4lc5tyyuVHiqxXsRvI247saqKBH0edJRJPKg192yAaRPDIjA55VjaKKSpp5Huniy8YlbKdr-1WEejXTwGizwQ63oJ3pAZPYpxh5bXzOHRHXxxAB3fB2MSDj8il4a30"/>
+<div class="absolute bottom-6 left-6 z-20 text-white">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="text-sm font-semibold text-primary">Official Program</span>
+</div>
+<p class="text-sm opacity-90">Empowering families for a brighter future.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="px-6 xl:px-40 flex justify-center py-12 bg-white dark:bg-background-dark">
+<div class="flex flex-col lg:flex-row gap-12 max-w-[1280px] flex-1">
+<div class="hidden lg:block w-64 shrink-0">
+<div class="sticky top-28 space-y-8">
+<nav class="flex flex-col space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white text-royal-green font-semibold shadow-soft border border-gray-200 transition-all hover:border-primary/30" href="#overview">
+<span class="material-symbols-outlined">info</span>
+                                Overview
+                            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-text-secondary hover:bg-surface-subtle hover:text-text-primary font-medium transition-all" href="#requirements">
+<span class="material-symbols-outlined">checklist</span>
+                                Entry Requirements
+                            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-text-secondary hover:bg-surface-subtle hover:text-text-primary font-medium transition-all" href="#conditions">
+<span class="material-symbols-outlined">rule</span>
+                                Specific Conditions
+                            </a>
+</nav>
+<div class="rounded-2xl bg-royal-green text-white p-6 shadow-xl relative overflow-hidden">
+<div class="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-white/10 blur-2xl"></div>
+<h3 class="text-lg font-bold mb-2 relative z-10">Need Assistance?</h3>
+<p class="text-sm text-white/80 mb-4 relative z-10">Our support team is here to guide you through the application process.</p>
+<button class="w-full py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-sm font-semibold backdrop-blur-sm transition-colors border border-white/10">
+                                Contact Support
+                            </button>
+</div>
+</div>
+</div>
+<div class="flex-1 min-w-0 space-y-12">
+<section class="scroll-mt-28" id="overview">
+<div class="bg-white rounded-2xl p-8 shadow-card border border-gray-100">
+<div class="flex items-center gap-4 mb-6">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<h2 class="text-2xl font-bold text-text-primary">Program Overview</h2>
+<p class="text-sm text-text-secondary">About the scholarship</p>
+</div>
+</div>
+<div class="prose prose-lg text-text-secondary leading-relaxed">
+<p class="mb-4">
+                                    This scholarship is designed to support the <strong class="text-text-primary">spouse or legal guardian</strong> who accompanies a primary scholarship student abroad. The program enables the companion to pursue their own higher education qualification, thereby enhancing the family’s academic and professional development while living overseas.
+                                </p>
+<p class="mb-4">
+                                    It contributes to human capital growth, supports family stability, and strengthens the Kingdom’s competitiveness by empowering accompanying individuals to achieve recognized academic degrees.
+                                </p>
+<div class="bg-surface-subtle rounded-xl p-5 border-l-4 border-primary">
+<p class="text-text-primary font-medium m-0">
+                                        Eligible companions may study a full-time Bachelor’s, Master’s, PhD, or equivalent academic program at accredited universities located in the same country as the primary student’s scholarship.
+                                    </p>
+</div>
+</div>
+</div>
+</section>
+<section class="scroll-mt-28" id="requirements">
+<div class="bg-white rounded-2xl p-8 shadow-card border border-gray-100">
+<div class="flex items-center gap-4 mb-8">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">assignment_turned_in</span>
+</div>
+<div>
+<h2 class="text-2xl font-bold text-text-primary">Entry Requirements</h2>
+
+
+<div class="mt-3">
+   
+</div>
+
+</div>
+
+</div>
+<div class="grid gap-6">
+<div class="flex gap-4 items-start">
+<div class="shrink-0 mt-1">
+<span class="material-symbols-outlined text-royal-green">school</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-bold text-text-primary">Previous Qualification</h4>
+<p class="text-text-secondary text-sm">The companion must have obtained the previous academic level qualification or a recognized equivalent. Certificates issued outside the Kingdom require equivalency.</p>
+</div>
+</div>
+<div class="h-px bg-gray-100 w-full"></div>
+<div class="flex gap-4 items-start">
+<div class="shrink-0 mt-1">
+<span class="material-symbols-outlined text-royal-green">history_edu</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-bold text-text-primary">No Prior Awards</h4>
+<p class="text-text-secondary text-sm">The companion must not have already been awarded a scholarship or completed a qualification at the same academic level.</p>
+</div>
+</div>
+<div class="h-px bg-gray-100 w-full"></div>
+<div class="flex gap-4 items-start">
+<div class="shrink-0 mt-1">
+<span class="material-symbols-outlined text-royal-green">group</span>
+</div>
+<div class="space-y-3 w-full">
+<h4 class="font-bold text-text-primary">Primary Scholarship Recipient Status</h4>
+<div class="bg-surface-subtle rounded-xl p-4 grid gap-3 sm:grid-cols-2 border border-gray-100">
+<div class="flex items-center gap-2 text-sm text-text-secondary">
+<span class="material-symbols-outlined text-base text-primary">check_circle</span>
+<span>Active scholarship status</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-text-secondary">
+<span class="material-symbols-outlined text-base text-primary">check_circle</span>
+<span>Currently studying (not postponed)</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-text-secondary sm:col-span-2">
+<span class="material-symbols-outlined text-base text-primary">check_circle</span>
+<span>Holds decision as primary student</span>
+</div>
+</div>
+</div>
+</div>
+<div class="h-px bg-gray-100 w-full"></div>
+<div class="flex gap-4 items-start">
+<div class="shrink-0 mt-1">
+<span class="material-symbols-outlined text-royal-green">location_on</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-bold text-text-primary">Residency</h4>
+<p class="text-text-secondary text-sm">The companion must reside with the primary scholarship recipient in the same country and university location.</p>
+</div>
+</div>
+
+
+
+
+<div class="bg-surface-subtle rounded-xl p-5 border-l-4 border-primary">
+<p class="text-text-primary font-medium m-0">
+Any Additional Requiremnts may be applied based on Ministry regulations.                                   </p>
+
+
+
+<p class="text-text-primary font-medium m-0">The companion's scholarship automatically ends when the primary scholarship recipient’snmission is completed or terminated</p>
+</div>
+
+
+</div>
+</div>
+</section>
+<section class="scroll-mt-28" id="conditions">
+<div class="bg-white rounded-2xl p-8 shadow-card border border-gray-100">
+<div class="flex items-center gap-4 mb-8">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">policy</span>
+</div>
+<div>
+<h2 class="text-2xl font-bold text-text-primary">Specific Conditions</h2>
+<p class="text-sm text-text-secondary">For Spouse or Guardian Companion</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="group relative pl-8 border-l-2 border-gray-200 hover:border-primary transition-colors">
+<div class="absolute -left-[9px] top-0 size-[18px] rounded-full bg-white border-2 border-gray-200 group-hover:border-primary transition-colors"></div>
+<h4 class="text-lg font-bold text-text-primary mb-2">Remaining Mission Period</h4>
+<p class="text-text-secondary">At least <span class="font-semibold text-text-primary bg-primary/10 px-1 rounded">6 months</span> must remain in the primary scholarship’s mission period at the start of study.</p>
+</div>
+<div class="group relative pl-8 border-l-2 border-gray-200 hover:border-primary transition-colors">
+<div class="absolute -left-[9px] top-0 size-[18px] rounded-full bg-white border-2 border-gray-200 group-hover:border-primary transition-colors"></div>
+<h4 class="text-lg font-bold text-text-primary mb-2">No Duplicate Companions</h4>
+<p class="text-text-secondary">The primary scholarship student must not have previously added another companion at the same academic level.</p>
+</div>
+<div class="group relative pl-8 border-l-2 border-gray-200 hover:border-primary transition-colors">
+<div class="absolute -left-[9px] top-0 size-[18px] rounded-full bg-white border-2 border-gray-200 group-hover:border-primary transition-colors"></div>
+<h4 class="text-lg font-bold text-text-primary mb-3">Unconditional Admission</h4>
+<p class="text-text-secondary mb-4">The companion must secure unconditional academic admission meeting the following criteria:</p>
+<div class="grid sm:grid-cols-2 gap-4">
+<div class="bg-surface-subtle p-4 rounded-xl border border-gray-200">
+<div class="mb-2 text-royal-green">
+<span class="material-symbols-outlined">category</span>
+</div>
+<p class="text-sm text-text-primary font-medium">In a specialization within the approved tracks of the Scholarship Program.</p>
+</div>
+<div class="bg-surface-subtle p-4 rounded-xl border border-gray-200">
+<div class="mb-2 text-royal-green">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<p class="text-sm text-text-primary font-medium">At a university recognized by the Ministry of Education.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div class="h-20 bg-white dark:bg-background-dark"></div>
+
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+//     const navLinks = document.querySelectorAll("nav a");
+// const sections = document.querySelectorAll("section[id]");
+
+// function changeActiveLink() {
+//     let currentSection = "";
+
+//     sections.forEach(section => {
+//         const top = section.offsetTop - 150;
+//         if (scrollY >= top) {
+//             currentSection = section.getAttribute("id");
+//         }
+//     });
+
+//     navLinks.forEach(link => {
+//         link.classList.remove(
+//             "bg-white",
+//             "text-royal-green",
+//             "font-semibold",
+//             "shadow-soft",
+//             "border",
+//             "border-gray-200"
+//         );
+
+//         if (link.getAttribute("href") === `#${currentSection}`) {
+//             link.classList.add(
+//                 "bg-white",
+//                 "text-royal-green",
+//                 "font-semibold",
+//                 "shadow-soft",
+//                 "border",
+//                 "border-gray-200"
+//             );
+//         }
+//     });
+// }
+
+// window.addEventListener("scroll", changeActiveLink);
+
+// navLinks.forEach(link => {
+//     link.addEventListener("click", () => {
+//         setTimeout(changeActiveLink, 300);
+//     });
+// });
+
+</script>
+</body></html>

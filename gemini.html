@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship for an Accompanying Person</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDf0/9z5g1zIWQkR/WJ/vE2KxX22aGg/M3h6T5M5IeBfK5t02E0s+05f1r+1S2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom Styles for the Page */
+
+        /* Header Logo and Text Style (as seen in image) */
+        .vision-logo {
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        /* Gradient Hero Section Style */
+        .hero-section {
+            background: linear-gradient(90deg, #5D54A3 0%, #7656B3 100%);
+            color: white;
+            padding: 5rem 0;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden; /* For containing the absolute image */
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin-top: 1rem;
+            max-width: 600px;
+        }
+
+        .explore-btn {
+            background-color: white;
+            color: #5D54A3;
+            font-weight: 600;
+            border-radius: 50px;
+            padding: 0.6rem 2rem;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .explore-btn:hover {
+            background-color: #f0f0f0;
+            color: #5D54A3;
+        }
+
+        /* Right side Image block (simulating the layout) */
+        .hero-image-block {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 45%; /* Adjust as needed */
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+            background-color: #f8f9fa; /* Fallback */
+            background-image: url('placeholder-students.jpg'); /* Replace with your actual image URL */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Card-like effect for the image text block */
+        .image-text-card {
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Main Content Structure */
+        .main-content-wrapper {
+            padding-top: 2rem;
+        }
+
+        /* Sticky Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 20px; /* Adjust as needed */
+            align-self: flex-start; /* Important for sticky behavior within flex/grid */
+        }
+
+        .nav-link-custom {
+            color: #555;
+            padding: 0.75rem 1rem;
+            border-left: 3px solid transparent;
+            font-weight: 500;
+        }
+
+        .nav-link-custom.active, .nav-link-custom:hover {
+            color: #5D54A3;
+            border-left-color: #5D54A3;
+            background-color: #f9f9ff;
+        }
+
+        .nav-link-custom i {
+            width: 20px; /* Standardize icon width */
+        }
+
+        /* Need Assistance Block */
+        .assistance-card {
+            background-color: #333;
+            color: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .assistance-card .btn-contact {
+            background-color: #A39DCE;
+            color: white;
+            font-weight: 600;
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            margin-top: 1rem;
+            width: 100%;
+        }
+
+        /* Main Content Cards */
+        .content-card {
+            margin-bottom: 2.5rem;
+        }
+
+        .content-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #5D54A3;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Requirement Items (List Group style) */
+        .requirement-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .requirement-item:hover {
+            background-color: #f7f7f7;
+        }
+
+        .requirement-icon {
+            font-size: 1.5rem;
+            color: #5D54A3;
+            margin-right: 1.5rem;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .requirement-body h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+
+        .requirement-body p {
+            font-size: 0.95rem;
+            color: #777;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Specific Conditions Boxes */
+        .condition-box {
+            background-color: #f0f0f0;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .condition-box i {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #5D54A3;
+        }
+        
+        /* Mobile Adjustments */
+        @media (max-width: 991.98px) {
+            .hero-section {
+                padding: 3rem 0;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-image-block {
+                display: none; /* Hide complex image block on small screens */
+            }
+            .sidebar {
+                position: static; /* Disable sticky on small screens */
+                margin-bottom: 2rem;
+            }
+            .sidebar-nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                border: 1px solid #eee;
+                border-radius: 8px;
+            }
+            .nav-link-custom {
+                border-left: none;
+                border-bottom: 3px solid transparent;
+            }
+            .nav-link-custom.active, .nav-link-custom:hover {
+                border-left-color: transparent;
+                border-bottom-color: #5D54A3;
+                background-color: #fff;
+            }
+            .assistance-card {
+                margin-top: 0;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container py-3">
+        <p class="vision-logo mb-0">
+            <span class="fw-bold">VISION 2030</span> | INTERNATIONAL STUDY
+        </p>
+    </div>
+
+    <div class="container">
+        <header class="hero-section">
+            <div class="row">
+                <div class="col-lg-7 px-5">
+                    <h1 class="hero-title">Scholarship for an Accompanying Person</h1>
+                    <p class="hero-subtitle">
+                        Enhance your family's academic journey. Support for spouses and legal guardians to pursue higher education while accompanying a primary scholarship student abroad.
+                    </p>
+                    <a href="#program-overview" class="btn explore-btn">Explore Programs <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="hero-image-block" style="background-image: url('https://i.ibb.co/6P26q2Z/placeholder-students.jpg');">
+                 <div class="image-text-card">
+                    <i class="fas fa-graduation-cap me-2"></i> Office Program <br>
+                    <span class="fw-bold">Investing in people for a brighter future.</span>
+                 </div>
+            </div>
+        </header>
+
+        <div class="row main-content-wrapper">
+
+            <div class="col-lg-3">
+                <div class="sidebar">
+
+                    <div class="card p-3 border-0 shadow-sm mb-4 d-none d-lg-block">
+                        <nav class="nav flex-column sidebar-nav" id="sidebar-nav">
+                            <a class="nav-link nav-link-custom active" href="#overview-sec"><i class="fas fa-th-large me-2"></i> Overview</a>
+                            <a class="nav-link nav-link-custom" href="#entry-requirements-sec"><i class="fas fa-list-ul me-2"></i> Entry Requirements</a>
+                            <a class="nav-link nav-link-custom" href="#specific-conditions-sec"><i class="fas fa-sliders-h me-2"></i> Specific Conditions</a>
+                        </nav>
+                    </div>
+
+                    <div class="assistance-card">
+                        <h4 class="mb-3 text-start fw-bold">Need Assistance?</h4>
+                        <p class="mb-2" style="font-size: 0.9rem;">
+                            Our agents are here to guide you through the application process.
+                        </p>
+                        <button class="btn btn-contact">Contact Support</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+
+                <section id="overview-sec" class="content-card">
+                    <h3 class="d-flex align-items-center">
+                        <i class="fas fa-book-open me-3 text-muted"></i> Program Overview
+                    </h3>
+                    <p class="text-secondary fw-bold" style="font-size: 0.95rem;">About the Scholarship</p>
+                    <p>
+                        This scholarship is designed to support the **spouse or legal guardian** who accompanies a primary scholarship student abroad. It encourages companions to pursue higher education, provides family stability, and strengthens the Kingdom's competitiveness by investing in human capital growth.
+                    </p>
+                    <p class="p-3 border-start border-4 border-info bg-light rounded-end">
+                        Eligible companions may study a full-time **Bachelor’s, Master’s, PhD, or equivalent academic program** at accredited universities located in the same country as the primary student's scholarship.
+                    </p>
+                </section>
+                
+                <hr>
+
+                <section id="entry-requirements-sec" class="content-card">
+                    <h3 class="d-flex align-items-center">
+                        <i class="fas fa-clipboard-list me-3 text-muted"></i> Entry Requirements
+                    </h3>
+
+                    <div class="requirement-item">
+                        <div class="requirement-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="requirement-body">
+                            <h5>Previous Qualification</h5>
+                            <p>
+                                The companion must have obtained the **previous academic level qualification** or a recognized equivalent. If the certificate was issued outside the Kingdom, **equivalency** is required.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-icon"><i class="fas fa-award"></i></div>
+                        <div class="requirement-body">
+                            <h5>No Prior Awards</h5>
+                            <p>
+                                The companion must **not** have already been awarded a scholarship or completed a qualification at the **same academic level**.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-icon"><i class="fas fa-user-tie"></i></div>
+                        <div class="requirement-body">
+                            <h5>Primary Scholarship Recipient Status</h5>
+                            <ul class="list-unstyled d-flex flex-wrap mb-0" style="font-size: 0.9rem;">
+                                <li class="me-4"><i class="far fa-check-circle text-success me-1"></i> **Must be on a scholarship** to study an academic program (Bachelor’s, Master’s, PhD, Fellowship).</li>
+                                <li class="me-4"><i class="far fa-check-circle text-success me-1"></i> **Must be actively studying** and not in postponement status.</li>
+                                <li><i class="far fa-check-circle text-success me-1"></i> Must have a scholarship decision issued as a **primary student, not as a companion**.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="requirement-body">
+                            <h5>Residency</h5>
+                            <p>
+                                The companion must **reside together** with the primary scholarship recipient in the **same country and location** of the university.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr>
+
+                <section id="specific-conditions-sec" class="content-card">
+                    <h3 class="d-flex align-items-center">
+                        <i class="fas fa-cog me-3 text-muted"></i> Specific Conditions
+                    </h3>
+
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <h5 class="fw-bold" style="font-size: 1rem; color: #555;"><i class="fas fa-clock me-2 text-warning"></i> Remaining Mission Period</h5>
+                            <p style="font-size: 0.95rem; color: #777;">
+                                At least **6 months** must remain in the primary scholarship's mission period at the start of study.
+                            </p>
+                        </div>
+
+                        <div class="col-12">
+                            <h5 class="fw-bold" style="font-size: 1rem; color: #555;"><i class="fas fa-users-slash me-2 text-warning"></i> No Duplicate Companions</h5>
+                            <p style="font-size: 0.95rem; color: #777;">
+                                The primary scholarship student must not have previously added another companion at the same academic level.
+                            </p>
+                        </div>
+                        
+                        <div class="col-12">
+                            <h5 class="fw-bold" style="font-size: 1rem; color: #555;"><i class="fas fa-shield-alt me-2 text-warning"></i> Unconditional Admission</h5>
+                            <p style="font-size: 0.95rem; color: #777; margin-bottom: 1rem;">
+                                The companion must secure unconditional academic admission meeting the following criteria:
+                            </p>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="condition-box">
+                                        <div>
+                                            <i class="fas fa-building d-block"></i>
+                                            In a specialization within the approved tracks of the Scholarship Program.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="condition-box">
+                                        <div>
+                                            <i class="fas fa-university d-block"></i>
+                                            At a university recognized by the Ministry of Education.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-4">
+                            <h5 class="fw-bold" style="font-size: 1rem; color: #555;"><i class="fas fa-stopwatch me-2 text-warning"></i> Automatic Termination</h5>
+                            <p style="font-size: 0.95rem; color: #777;">
+                                The companion’s scholarship **automatically ends** when the primary scholarship recipient’s mission is completed or terminated.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+                <div class="mb-5"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link-custom');
+
+            function scrollActive() {
+                // Get current scroll position, adjusted for better UX
+                const scrollY = window.pageYOffset + 100;
+
+                sections.forEach(current => {
+                    const sectionHeight = current.offsetHeight;
+                    const sectionTop = current.offsetTop - 50;
+                    const sectionId = current.getAttribute('id');
+                    
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        document.querySelector('.nav-link-custom[href*=' + sectionId + ']').classList.add('active');
+                    }
+                });
+            }
+
+            // Only enable scroll active on large screens for sidebar
+            if (window.innerWidth >= 992) {
+                window.addEventListener('scroll', scrollActive);
+                scrollActive(); // Run on load
+            }
+        });
+    </script>
+</body>
+</html>
