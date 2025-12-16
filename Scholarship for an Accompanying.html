@@ -302,6 +302,7 @@
         rgba(255, 255, 255, 0.6)
     );
     position: relative;
+    padding-top: 300px !important;
 }
 
 
@@ -591,6 +592,93 @@
         margin-bottom: 20px; /* spacing so content doesn’t touch */
     }
 }
+
+
+
+
+
+
+
+.news-blogs {
+  background: #fff;
+  /* font-family: 'Fira Sans', sans-serif; */
+}
+
+.news-blogs .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.news-blogs .underline {
+  width: 80px;
+  height: 3px;
+  background: #8D7BE9;
+  margin: 8px auto 15px;
+}
+
+.news-blogs .section-subtitle {
+  font-size: 15px;
+  color: #2B292A;
+  font-family: 'Gilroy-Bold', sans-serif;
+
+}
+
+.news-blogs .blog-card {
+  background: #fff;
+  border-radius: 0px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.news-blogs .blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.news-blogs .blog-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.news-blogs .blog-content {
+  padding: 15px;
+}
+
+.news-blogs .blog-date {
+  font-size: 13px;
+  color: #585657;
+  margin-bottom: 8px;
+  font-family: 'Gilroy-Bold', sans-serif;
+
+}
+
+.news-blogs .blog-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2B292A;
+  margin-bottom: 10px;
+  font-family: 'Gilroy-Bold', sans-serif;
+
+}
+
+.news-blogs .blog-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8D7BE9;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-family: 'Gilroy-Bold', sans-serif;
+
+}
+
+.news-blogs .blog-link:hover {
+  color: #3a0ca3;
+}
+
+
+
+
 
 
     </style>
@@ -977,6 +1065,124 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+<section class="news-blogs py-5">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="section-title">{% trans "News & Blogs" %}</h2>
+      <div class="underline"></div>
+      <p class="section-subtitle">{% trans "Let's help you live your dream" %}</p>
+    </div>
+
+    <div class="row">
+   
+
+
+
+
+            {% for blog in blogs %}
+    
+<div class="col-md-4 col-sm-6 mb-4">
+  <a href="{% url 'blog_detail' blog.slug %}" class="blog-card-link text-decoration-none">
+    <div class="blog-card">
+      {% if blog.main_image %}
+        <img src="{{ blog.main_image.url }}" alt="Blog Image" class="blog-img img-fluid">
+      {% else %}
+        <img src="images/0d03f0c7f75aa356c9eb6b584da816b8b6540be2.jpg" alt="Blog Image" class="blog-img img-fluid">
+      {% endif %}
+
+      <div class="blog-content">
+        <p class="blog-date">{{ blog.date_posted|date:"d F Y" }}</p>
+        <h5 class="blog-title">{{ blog.title }}</h5>
+        <div class="blog-link">{% trans "Read More" %}</div> 
+      </div>
+    </div>
+  </a>
+</div>
+
+      {% endfor %}
+
+      
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+        <section class="testimonial-section">
+        <div class="container">
+
+            <div class="row section-header">
+            <div class="section-title">
+                <h2>{% trans "Student" %} <span style="color: #6c63ff;">{% trans "Testimonials" %}</span></h2>
+                <div class="underline"></div>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-12">
+                <div class="testimonial-slider">
+                    <div class="owl-carousel owl-theme testimonials-carousel">
+
+{% for testimonial in testimonial %}
+<div class="testimonial-card">
+    <div class="card-header">
+        {% if testimonial.image %}
+            <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}" class="profile-image">
+        {% else %}
+            <!-- <div class="profile-placeholder" data-name="{{ testimonial.name }}"></div> -->
+            <img src="{% static 'images/profile.jpg' %}" alt="{{ testimonial.name }}" class="profile-image">
+
+
+        {% endif %}
+
+        <div class="customer-info">
+            <h5 class="customer-name">{{ testimonial.name }}</h5>
+            <div class="rating">
+                {% for i in "12345" %}
+                    {% if forloop.counter <= testimonial.rating %}
+                        <i class="fas fa-star star"></i>
+                    {% else %}
+                        <i class="far fa-star star"></i>  {# empty star #}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <i class="fas fa-quote-right quote-icon"></i>
+    </div>
+    <p class="testimonial-content">
+        {{ testimonial.description }}
+    </p>
+</div>
+{% endfor %}
+
+                    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+    </section>
+
+
 
 
 

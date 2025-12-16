@@ -16,6 +16,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet">
 
@@ -29,7 +30,7 @@
         }
         
         body {
-            font-family: 'Lexend', sans-serif;
+            font-family: 'Lato', sans-serif;
             color: #333;
             overflow-x: hidden;
         }
@@ -38,10 +39,14 @@
         .hero-section {
             background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
             color: #725ed5;
-            padding: 140px 0 20px;
+            padding: 140px 0 30px;
             position: relative;
             overflow: hidden;
             /* min-height: 100vh; */
+        }
+
+        .stats-section{
+            padding-bottom: 130px !important;
         }
         
         /* .hero-section::before {
@@ -65,23 +70,23 @@
             font-weight: bolder;
             margin-bottom: 30px;
             animation: fadeInUp 1s ease;
-            font-family: 'Lexend', sans-serif;
+            font-family: 'Playfair Display', serif;
         }
         
         .hero-section .tagline {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-weight: 300;
             margin-bottom: 0px;
             opacity: 0.95;
             animation: fadeInUp 1s ease;
 
-            color: #9786ef;
-            font-family: 'Fira Sans', sans-serif;
+            color: #8570ef;
+            font-family: 'Lato', sans-serif;
 
 
         }
         .hero-section .lead {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             opacity: 0.9;
             max-width: 700px;
             margin: 0 auto;
@@ -115,16 +120,16 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
         }
         
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 700;
             color: #8D7BE9 !important;
             display: block;
             margin-bottom: 10px;
-            font-family: 'Fira Sans', sans-serif;
+            font-family: 'Playfair Display', serif;
         }
         
         .stat-label {
-            font-size: 1rem;
+            font-size: 1.2rem;
             opacity: 0.9;
             /* font-family: 'Fira Sans', sans-serif; */
 
@@ -134,7 +139,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
 
         /* About Section */
         .about-section {
-            padding: 100px 0;
+            padding: 80px 0;
             background: #f8f9fa;
 
             /* animation: fadeInUp 1s ease; */
@@ -146,11 +151,11 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
         .about-section .container {
                                                   animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 20% ;
+            animation-range: entry 0% cover 10% ;
         }
         
         .section-title {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 20px;
             color: #725ed5;
@@ -158,7 +163,8 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
             padding-bottom: 15px;
                    animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40% ;
+            animation-range: entry 0% cover 10% ;
+            font-family: 'Playfair Display', serif;
         }
 .about-top-section .section-title::after {
     left: 0 !important;
@@ -181,14 +187,21 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
 
 
 
+
+
+        .cp{
+            font-size: 1.3rem; 
+            color: #666; 
+            line-height: 1.8;
+        }
         
         .about-content {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             line-height: 1.8;
             color: #555;
                    animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40% ;
+            animation-range: entry 0% cover 10% ;
         }
         
         .feature-card {
@@ -201,7 +214,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
             border: 1px solid #e8e8e8;
                    animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 20% ;
+            animation-range: entry 0% cover 10% ;
         }
         
         .feature-card:hover {
@@ -222,8 +235,8 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
             color: white;
         }
         
-        .feature-card h4 {
-            font-size: 1.4rem;
+        .feature-card h3 {
+            /* font-size: 1.4rem; */
             font-weight: 600;
             margin-bottom: 15px;
             color: #725ed5;
@@ -233,6 +246,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
         .feature-card p {
             color: #666;
             line-height: 1.7;
+            font-size: 1.2rem;
         }
 
 
@@ -241,7 +255,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
         
         /* Founder Section */
         .founder-section {
-            padding: 100px 0;
+            padding: 60px 0;
             background: white;
         }
         
@@ -253,7 +267,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
                           animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40% ;
+            animation-range: entry 0% cover 10% ;
         }
 
 
@@ -279,13 +293,13 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
 }
         
         .founder-card h3 {
-            font-size: 2rem;
+            /* font-size: 2rem; */
             font-weight: 700;
             margin-bottom: 10px;
         }
         
         .founder-card .title {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             opacity: 0.9;
             margin-bottom: 30px;
         }
@@ -293,6 +307,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
         .founder-card p {
             line-height: 1.8;
             opacity: 0.95;
+            font-size: 1.2rem;
         }
         
         /* Team Section */
@@ -305,7 +320,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
         .team-section .container {
                                                   animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40% ;
+            animation-range: entry 0% cover 10% ;
         }
         
         .team-card {
@@ -320,7 +335,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
     align-items: center;
                                       animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40% ;
+            animation-range: entry 0% cover 10% ;
         }
         
         .team-card:hover {
@@ -357,7 +372,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
         }
         
         .team-info h4 {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             font-weight: 600;
             color: #5545aa;
             margin-bottom: 5px;
@@ -367,22 +382,24 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
             color: #8D7BE9;
             font-weight: 500;
             margin-bottom: 15px;
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
         
         .team-info p {
             color: #666;
             line-height: 1.7;
-            font-size: 0.95rem;
+            font-size: 1.2rem;
         }
         
         /* Values Section */
         .values-section {
-            padding: 100px 0;
+            /* padding: 80px 0; */
+            padding: 80px 0 20px 0;
+
             background: white;
                                       animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40% ;
+            animation-range: entry 0% cover 10% ;
         }
         
         .value-item {
@@ -390,7 +407,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
             padding: 40px 20px;
                                       animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40% ;
+            animation-range: entry 0% cover 10% ;
             
         }
         
@@ -412,8 +429,8 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
             transform: rotate(-45deg);
         }
         
-        .value-item h4 {
-            font-size: 1.4rem;
+        .value-item h3 {
+            font-size: 1.8rem;
             font-weight: 600;
             color: #8D7BE9;
             margin-bottom: 15px;
@@ -422,6 +439,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
         .value-item p {
             color: #666;
             line-height: 1.7;
+            font-size: 1.2rem;
         }
         
         /* CTA Section */
@@ -433,16 +451,17 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
         }
         
         .cta-section h2 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 20px;
                                       animation: fadeUp linear;
             animation-timeline: view();
             animation-range: entry 0% cover 10% ;
+  font-family: 'Playfair Display', serif;
         }
         
         .cta-section p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin-bottom: 30px;
             opacity: 0.95;
                                       animation: fadeUp linear;
@@ -492,7 +511,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
     padding: 100px 0;
                        animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40% ;
+            animation-range: entry 0% cover 10% ;
 }
 
 
@@ -506,7 +525,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
     box-shadow: 0 10px 30px rgba(194, 150, 252, 0.08);
                        animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 30% ;
+            animation-range: entry 0% cover 10% ;
 }
 
 /* Accordion Button */
@@ -515,7 +534,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
     border-radius: 8px !important;
     padding: 22px;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #3f3e3e;
     box-shadow: none !important;
                     
@@ -539,7 +558,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
     border-radius: 2px;
     display: grid;
     place-items: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 /* Accordion Body */
@@ -547,7 +566,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
     padding: 0 25px 25px;
     padding-top: 20px !important;
     color: #4a4a4a;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     
 }
 
@@ -555,6 +574,12 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
 
 
 
+
+
+     .commit-content{
+            color: #666; 
+            font-size: 1.2rem;
+        }
 
 
 
@@ -567,7 +592,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
         padding: 100px 0;
                        animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40% ;
+            animation-range: entry 0% cover 10% ;
 }
 
 /* .community-title {
@@ -578,12 +603,12 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
 } */
 
 .community-text {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #666; /* Soft dark gray */
     line-height: 1.8;
                 animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40% ;
+            animation-range: entry 0% cover 10% ;
 }
 
 .community-img {
@@ -592,7 +617,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
     object-fit: cover;
                 animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40% ;
+            animation-range: entry 0% cover 10% ;
 }
 
 /* Optional smooth spacing for mobile */
@@ -604,6 +629,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
 
     .community-text {
         text-align: center;
+        font-size: 1.1rem;
     }
 }
 
@@ -634,6 +660,18 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero-section h1 {
@@ -647,16 +685,40 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
                    .hero-section {
     
             padding: 80px 0 20px;
+            /* padding: 140px 0 30px; */
+
         
             /* min-height: 100vh; */
         }
         
+              .stats-section{
+            padding-bottom: 30px !important;
+        }
+
+        
+        .cp{
+            font-size: 1.1rem; 
+            color: #666; 
+            line-height: 1.8;
+        }
             
             .stat-number {
                 font-size: 1.5rem;
             }
+
+            .about-content{
+                font-size: 1.1rem;
+
+            }
+
+                  .feature-card p {
+
+            font-size: 1.1rem;
+        }
+
+
                     .stat-label {
-            font-size: 0.7rem;}
+            font-size: 0.9rem;}
 
         .stats-row {
             margin-top: 10px !important;
@@ -674,7 +736,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
             background: white;
                                       animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 20% ;
+            animation-range: entry 0% cover 10% ;
         }
   
             
@@ -737,7 +799,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
         .team-section .container {
                                                   animation: fadeUp linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 20% ;
+            animation-range: entry 0% cover 10% ;
         }
             
             .founder-card {
@@ -756,6 +818,126 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
             margin-bottom: 20px;
    
         }
+
+
+
+
+        .value-item {
+            text-align: center;
+            padding: 30px 10px;
+                                      animation:none;
+     
+            
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #8D7BE9, #8D7BE9);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 1.5rem;
+            color: white;
+            transform: rotate(45deg);
+        }
+        
+    
+        .value-item h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #8D7BE9;
+            margin-bottom: 15px;
+        }
+        
+        .value-item p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+
+        .commit-content{
+            color: #666; 
+            font-size: 1.1rem;
+        }
+
+
+        .accordion-button {
+
+    font-size: 1.1rem;
+
+                    
+}
+
+.accordion-body{
+    font-size: 1rem;
+}
+
+
+
+    .feature-card {
+        text-align: center;
+    }
+
+    .feature-icon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
+
+
+
+
+
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+
+
+     .team-card {
+   
+            margin-bottom: 20px;
+               
+        }
+        
+  
+
+
+        .team-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .team-info h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #5545aa;
+            margin-bottom: 5px;
+        }
+        
+        .team-info .role {
+            color: #8D7BE9;
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+
+
+            .founder-section {
+            padding: 70px 0;
+            background: white;
+        }
+        
+      
+
 
         }
     </style>
@@ -847,7 +1029,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
                                 <div class="feature-icon">
                                     <i class="fas fa-graduation-cap"></i>
                                 </div>
-                                <h4>Expert Guidance</h4>
+                                <h3>Expert Guidance</h3>
                                 <p>20+ years of experience in academic counseling and university admissions</p>
                             </div>
                         </div>
@@ -856,7 +1038,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
                                 <div class="feature-icon">
                                     <i class="fas fa-globe"></i>
                                 </div>
-                                <h4>Global Reach</h4>
+                                <h3>Global Reach</h3>
                                 <p>Access to universities across 60 countries worldwide</p>
                             </div>
                         </div>
@@ -865,7 +1047,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
                                 <div class="feature-icon">
                                     <i class="fas fa-handshake"></i>
                                 </div>
-                                <h4>Comprehensive Support</h4>
+                                <h3>Comprehensive Support</h3>
                                 <p>From admissions to accommodation and beyond</p>
                             </div>
                         </div>
@@ -874,7 +1056,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
                                 <div class="feature-icon">
                                     <i class="fas fa-award"></i>
                                 </div>
-                                <h4>Proven Success</h4>
+                                <h3>Proven Success</h3>
                                 <p>Thousands of successful student placements</p>
                             </div>
                         </div>
@@ -890,7 +1072,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
             <div class="row mb-5">
                 <div class="col-lg-8 mx-auto text-center">
                     <h2 class="section-title d-inline-block">Why Choose Greendome</h2>
-                    <p class="mt-3" style="font-size: 1.2rem; color: #666;">Choosing the right education and consulting company can make a significant difference in a student's academic journey. At Greendome, we are committed to providing exceptional services that go beyond what our competitors offer.</p>
+                    <p class="mt-3 cp" >Choosing the right education and consulting company can make a significant difference in a student's academic journey. At Greendome, we are committed to providing exceptional services that go beyond what our competitors offer.</p>
                 </div>
             </div>
             
@@ -900,7 +1082,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
                         <div class="value-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h4>Honesty & Credibility</h4>
+                        <h3>Honesty & Credibility</h3>
                         <p>We believe in transparency and honesty in our interactions. We provide accurate and up-to-date information and are committed to building long-term relationships based on trust.</p>
                     </div>
                 </div>
@@ -909,7 +1091,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
                         <div class="value-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h4>Student-Centered Approach</h4>
+                        <h3>Student-Centered Approach</h3>
                         <p>We understand that every student has unique needs and goals. We work closely with them to ensure their needs are met and help them achieve their full potential.</p>
                     </div>
                 </div>
@@ -918,7 +1100,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
                         <div class="value-icon">
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4>Exceptional Service</h4>
+                        <h3>Exceptional Service</h3>
                         <p>Our team members are experts with extensive experience in scholarship and academic studies. We provide comprehensive guidance from start to finish.</p>
                     </div>
                 </div>
@@ -963,7 +1145,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
             <div class="row mb-5">
                 <div class="col-lg-8 mx-auto text-center">
                     <h2 class="section-title d-inline-block">Our Team</h2>
-                    <p class="mt-3" style="font-size: 1.2rem; color: #666;">At Greendome, our team is your team. With years of experience and in-depth knowledge of the academic landscape in the UK, our dedicated professionals work tirelessly to provide unparalleled support and guidance to students.</p>
+                    <p class="mt-3 cp" >At Greendome, our team is your team. With years of experience and in-depth knowledge of the academic landscape in the UK, our dedicated professionals work tirelessly to provide unparalleled support and guidance to students.</p>
                 </div>
             </div>
             
@@ -1055,7 +1237,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
                     regular events, workshops, and fun activities we cultivated a long-lasting relationship.
                 </p>
 
-                 <div class="row g-4">
+                 <div class="row g-4 mt-1">
             <div class="col-md-6">
                 <img src="handsome-happy-bearded-man.jpg" class="img-fluid community-img" alt="">
             </div>
@@ -1092,7 +1274,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
                     <h2 class="section-title d-inline-block">Our Commitment</h2>
-                    <p class="mt-4" style="font-size: 1.2rem; color: #666; line-height: 1.8;">At Greendome, we are committed to providing the best possible support and guidance to our students. We understand that every student has unique needs and goals, and we work closely with them to ensure that their needs are met. We are dedicated to helping our students achieve their full potential and are committed to providing them with the resources and support they need to succeed.</p>
+                    <p class="mt-3 cp" >At Greendome, we are committed to providing the best possible support and guidance to our students. We understand that every student has unique needs and goals, and we work closely with them to ensure that their needs are met. We are dedicated to helping our students achieve their full potential and are committed to providing them with the resources and support they need to succeed.</p>
                 </div>
             </div>
             
@@ -1101,22 +1283,22 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
                     <div class="feature-icon mx-auto">
                         <i class="fas fa-book-open"></i>
                     </div>
-                    <h4 class="mt-3" style="color: #1e3c72;">Academic Excellence</h4>
-                    <p style="color: #666;">Guiding students to top-tier universities and programs that match their aspirations.</p>
+                    <h3 class="mt-3" style="color: #1e3c72;">Academic Excellence</h3>
+                    <p  class="p-1 commit-content">Guiding students to top-tier universities and programs that match their aspirations.</p>
                 </div>
                 <div class="col-md-4 text-center mb-4">
                     <div class="feature-icon mx-auto">
                         <i class="fas fa-home"></i>
                     </div>
-                    <h4 class="mt-3" style="color: #1e3c72;">Accommodation Support</h4>
-                    <p style="color: #666;">Comprehensive assistance with finding safe and comfortable housing arrangements.</p>
+                    <h3 class="mt-3" style="color: #1e3c72;">Accommodation Support</h3>
+                    <p  class="p-1 commit-content">Comprehensive assistance with finding safe and comfortable housing arrangements.</p>
                 </div>
                 <div class="col-md-4 text-center mb-4">
                     <div class="feature-icon mx-auto">
                         <i class="fas fa-briefcase"></i>
                     </div>
-                    <h4 class="mt-3" style="color: #1e3c72;">Career Guidance</h4>
-                    <p style="color: #666;">Helping students navigate their career paths and achieve their professional goals.</p>
+                    <h3 class="mt-3" style="color: #1e3c72;">Career Guidance</h3>
+                    <p  class="p-1 commit-content">Helping students navigate their career paths and achieve their professional goals.</p>
                 </div>
             </div>
         </div>
@@ -1138,7 +1320,7 @@ body, p, ul, li { font-family: 'Work Sans', sans-serif !important; }
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
                     <h2 class="section-title d-inline-block">Frequently asked questions</h2>
-                    <p class="mt-4" style="font-size: 1.2rem; color: #666; line-height: 1.8;">At Greendome, we are committed to providing the best possible support and guidance to our students. We understand that every student has unique needs and goals, and we work closely with them to ensure that their needs are met. We are dedicated to helping our students achieve their full potential and are committed to providing them with the resources and support they need to succeed.</p>
+                    <p class="mt-4 cp" >At Greendome, we are committed to providing the best possible support and guidance to our students. We understand that every student has unique needs and goals, and we work closely with them to ensure that their needs are met. We are dedicated to helping our students achieve their full potential and are committed to providing them with the resources and support they need to succeed.</p>
                 </div>
             </div>
 
