@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Undergraduate Degrees</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700;800&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-purple: #8D7BE9;
+            --secondary-purple: #6c5ce7;
+            --heading-font: 'Fira Sans Condensed', sans-serif;
+            --body-font: 'Lexend', sans-serif;
+            --text-dark: #1a1a1b;
+            --text-muted: #5f6368;
+        }
+
+        body {
+            font-family: var(--body-font);
+            color: var(--text-dark);
+            background-color: #f8f9ff;
+        }
+
+        /* --- HIGH IMPACT HERO SECTION --- */
+        .hero-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #fdfbff 0%, #f4f0ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: -10%;
+            right: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(141, 123, 233, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            z-index: 0;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            color: var(--text-dark);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section h1 {
+            font-family: var(--heading-font);
+            font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section h1 span {
+            color: var(--primary-purple);
+        }
+
+        .hero-section p.lead {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 650px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            z-index: 1;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            border-radius: 20px;
+            display: block;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-purple);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(141, 123, 233, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            background-color: var(--secondary-purple);
+            box-shadow: 0 15px 30px rgba(141, 123, 233, 0.4);
+            color: white;
+        }
+
+        /* --- CONTENT SECTION --- */
+        .degrees-section { padding: 40px 0; }
+        
+        .custom-alert {
+            background-color: #fff3e0; 
+            border-left: 5px solid #ff9800; 
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .accordion-item {
+            background-color: #fff;
+            border: none !important;
+            margin-bottom: 1.5rem;
+            border-radius: 20px !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            padding: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: var(--heading-font);
+            color: var(--text-dark);
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: var(--primary-purple);
+        }
+
+        @media (max-width: 991px) {
+            .hero-section { text-align: center; padding: 60px 0; }
+            .hero-section p.lead { margin: 0 auto 40px; }
+            .hero-image-wrapper { margin-top: 50px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="hero-badge">🌍 A Truly Global University</div>
+                    <h1>Learn how to think – <span>not what to think.</span></h1>
+                    <p class="lead">With more than 400 undergraduate degree programmes and 42,000 students from 150 different countries, we’re London’s truly global university.</p>
+                    <a href="#undergradAccordion" class="btn-primary-custom">
+                        Explore Undergraduate Courses
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-lg-5">
+                    <div class="hero-image-wrapper">
+                        <img src="images/young-woman-teaching-english-lessons-online.jpg" alt="University Campus Life">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="degrees-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    
+                    <h2 class="mb-4">Undergraduate courses</h2>
+                    
+                    <div class="custom-alert" role="alert">
+                        <span style="font-size: 1.5rem;">⚠️</span>
+                        <div>
+                            <strong>Service Notice:</strong> Please note - Access to our course pages may be disrupted between 5pm (UK time) on Friday, 5 December and 10am (UK time) on Monday, 8 December 2025 for upgrading work. During this period our application system will be unavailable.
+                        </div>
+                    </div>
+                    
+                    <h3 class="mb-3">Everything you need to know about Undergraduate degrees</h3>
+                    <p>An overview of the entry requirements and policies for our undergraduate programmes. UCL receives a large number of applications – for 2025 entry we received nearly 91,000 applications via UCAS.</p>
+
+                    <div class="accordion mt-5" id="undergradAccordion">
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEntry">
+                                    Entry Requirements
+                                </button>
+                            </h2>
+                            <div id="collapseEntry" class="accordion-collapse collapse" data-bs-parent="#undergradAccordion">
+                                <div class="accordion-body">
+                                    <p>To be considered, you must meet (or be predicted to meet) the minimum requirements for the programme you are interested in. Given the competition for places, we recommend you only apply to programmes where you meet these requirements.</p>
+                                    
+                                    <p><strong>Assessment Policy:</strong><br>
+                                    UCL does not use UCAS tariff points to assess applications. Instead, we use specific qualification and grade requirements to assess your eligibility. Our entrance requirements are based on three A levels. Depending on the degree programme, we make standard offers in the range <strong>A*A*A–ABB</strong>.</p>
+                                    
+                                    <p><strong>Engineering Foundation Year:</strong><br>
+                                    These programmes are for UK fee paying students who are traditionally underrepresented. The entry requirements are 100 UCAS tariff points from level 3 academic qualifications alongside specific non-academic requirements.</p>
+                                    
+                                    <p><strong>Contextual offers:</strong><br>
+                                    You may be eligible for a contextual offer as part of the <em>Access UCL</em> scheme. These are lower than our standard offers and listed on each programme’s page.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDisclaimer">
+                                    Disclaimer
+                                </button>
+                            </h2>
+                            <div id="collapseDisclaimer" class="accordion-collapse collapse" data-bs-parent="#undergradAccordion">
+                                <div class="accordion-body">
+                                    <p>Together with departmental websites, this Prospectus is intended as a general guide. UCL seeks to ensure information is correct but does not guarantee its accuracy and does not accept liability for omissions or errors.</p>
+                                    
+                                    <p><strong>Changes and Commitment:</strong><br>
+                                    UCL reserves the right to add, remove or alter content without notice. Nothing on this website should be construed as a binding offer. Any offer made by UCL will be subject to its own terms made clear at the time of application.</p>
+                                    
+                                    <p><strong>COVID-19 Notice:</strong><br>
+                                    In light of the pandemic and changing government guidance, there may need to be changes to academic programmes. UCL will keep students updated of any changes to their chosen programme of study as information becomes available.</p>
+                                    
+                                    <p><strong>Third party websites:</strong><br>
+                                    Links to third party websites are for information only and do not signify endorsement. UCL takes no responsibility for loss or damage suffered from using information on linked sites.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

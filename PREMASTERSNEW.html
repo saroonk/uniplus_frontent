@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Pre-Masters Programs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700;800&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-purple: #8D7BE9;
+            --secondary-purple: #6c5ce7;
+            --heading-font: 'Fira Sans Condensed', sans-serif;
+            --body-font: 'Lexend', sans-serif;
+            --text-dark: #1a1a1b;
+            --text-muted: #5f6368;
+        }
+
+        body {
+            font-family: var(--body-font);
+            color: var(--text-dark);
+            background-color: #f8f9ff;
+        }
+
+        /* --- HIGH IMPACT HERO SECTION --- */
+        .hero-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #fdfbff 0%, #f4f0ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: -10%;
+            right: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(141, 123, 233, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            z-index: 0;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            color: var(--text-dark);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section h1 {
+            font-family: var(--heading-font);
+            font-size: clamp(3rem, 6vw, 4.8rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section h1 span {
+            color: var(--primary-purple);
+        }
+
+        .hero-section p.lead {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 580px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            z-index: 1;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            border-radius: 20px;
+            display: block;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-purple);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(141, 123, 233, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            background-color: var(--secondary-purple);
+            box-shadow: 0 15px 30px rgba(141, 123, 233, 0.4);
+            color: white;
+        }
+
+        /* --- CONTENT SECTION --- */
+        .degrees-section { padding: 40px 0; }
+        
+        .custom-alert {
+            background-color: #fff3e0; 
+            border-left: 5px solid #ff9800; 
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .accordion-item {
+            background-color: #fff;
+            border: none !important;
+            margin-bottom: 1.5rem;
+            border-radius: 20px !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            padding: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: var(--heading-font);
+            color: var(--text-dark);
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: var(--primary-purple);
+        }
+
+        .fee-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #f0edff;
+            color: var(--primary-purple);
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 991px) {
+            .hero-section { text-align: center; padding: 60px 0; }
+            .hero-section p.lead { margin: 0 auto 40px; }
+            .hero-image-wrapper { margin-top: 50px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-badge">🚀 Fast-Track Your Masters</div>
+                    <h1>IFG <span>Pre-Masters</span> Programs</h1>
+                    <p class="lead">Bridge the gap between your undergraduate studies and a UK Master’s degree. Gain the academic and English skills needed for top-tier postgraduate success.</p>
+                    <a href="#preMastersAccordion" class="btn-primary-custom">
+                        View Programs
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1000" alt="Students collaborating">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="degrees-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    
+                    <h2 class="mb-4">Program About</h2>
+                    
+                    <div class="custom-alert" role="alert">
+                        <span style="font-size: 1.5rem;">⚠️</span>
+                        <div>
+                            <strong>Maintenance Notice:</strong> Access to our application system may be disrupted between 5pm Friday, 5 December and 10am Monday, 8 December 2025.
+                        </div>
+                    </div>
+                    
+                    <h3 class="mb-3">Who Needs an IFG Pre-masters</h3>
+                    <p>Pre-Masters programmes are specifically designed for international students who do not meet standard entry requirements for postgraduate study in an English-speaking country.</p>
+                    <p>They are designed to give students the academic skills that they need for postgraduate-level study, while improving their English to the required level.  They often, as in the case of our Pre-Masters in Business Management, offer progression to specific taught masters courses at universities in English-speaking countries.</p>
+                    <p>Universities in the UK generally require the equivalent of at least a 2:2 degree (50 – 59%)and usually a 2:1 (60-69%) undergraduate degree for entry to a taught masters.  So even if you have the required English level you may still require a Pre-Masters.</p>
+
+                    <div class="accordion mt-5" id="preMastersAccordion">
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOffer">
+                                    The IFG Pre-Masters Programme offer
+                                </button>
+                            </h2>
+                            <div id="collapseOffer" class="accordion-collapse collapse" data-bs-parent="#preMastersAccordion">
+                                <div class="accordion-body">
+                                    <p>IFG offers two focused pre-masters and a shorter more general programme:</p>
+                                    <ul>
+                                        <li>Pre-Masters in Business Management (6-months)</li>
+                                        <li>Pre-Masters in Law (6-months)</li>
+                                        <li>Pre-sessional for Postgraduate Studies (3-months)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDifference">
+                                    Undergraduate vs Postgraduate Study
+                                </button>
+                            </h2>
+                            <div id="collapseDifference" class="accordion-collapse collapse" data-bs-parent="#preMastersAccordion">
+                                <div class="accordion-body">
+                                    <p>UK taught masters require a higher level of English than undergraduate degrees and are generally one academic year in length rather than three.  There are also significant academic differences.</p>
+                                    <p>Masters degrees involve a much more in-depth study of a chosen field. This requires a far greater depth of analysis and research and so means that postgraduate students are expected to undertake more independent study than at undergraduate level.</p>
+                                    <p>Students should come away from a postgraduate course with a strong understanding and the specialist knowledge to be considered an expert or specialist in that field.  A pre-masters will prepare you for the different level of study and academic skills required.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                         <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStudy">
+                                    What will you study
+                                </button>
+                            </h2>
+                            <div id="collapseStudy" class="accordion-collapse collapse" data-bs-parent="#preMastersAccordion">
+                                <div class="accordion-body">
+                                    <p>The specific content of each of our Pre-Masters in Business Management and Pre-Masters in Law can be found on the relevant pages.  As well as key subject modules you will also learn the research, communication and analytical skills that you will require at university.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProgression">
+                                    Progression to masters study in the UK
+                                </button>
+                            </h2>
+                            <div id="collapseProgression" class="accordion-collapse collapse" data-bs-parent="#preMastersAccordion">
+                                <div class="accordion-body">
+                                    <p>Our Pre-Masters in Business Management leads to a range of taught masters at the University of Derby Business School and Aston University.
+</p>
+<p>Our Pre-Masters in Law programme is designed for graduates wanting to progress onto an LLM or other law-related master’s degree in the UK and includes one-to-one assistance in choosing and applying to your chosen course.
+</p>
+<p>The IFG Pre-sessional for Postgraduate Studies is a more general programme for students who meet the academic subject requirements of their chosen course but need to focus on their research and academic skills.
+</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEntry">
+                                    Entry Requirements
+                                </button>
+                            </h2>
+                            <div id="collapseEntry" class="accordion-collapse collapse" data-bs-parent="#preMastersAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Academic Requirements:</strong></p>
+                                    <ul>
+                                        <li>A Bachelor’s degree below the standard UK 2:2 level (typically under 50–59%), </li>
+                                        <li>Qualifications that do not meet direct entry criteria for a Master’s degree</li>
+                                        <li>Applicants with strong professional experience but limited academic background may also be considered, usually following an interview.</li>
+                                    </ul>
+                                    <p><strong>English Language Requirements:</strong></p>
+                                    <p>IELTS 5.5 overall, with at least 5.0 in reading and writing.</p>
+                                    <p>(Requirements may vary depending on the chosen specialisation, such as business, law, or engineering.)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFees">
+                                    Program Fees
+                                </button>
+                            </h2>
+                            <div id="collapseFees" class="accordion-collapse collapse" data-bs-parent="#preMastersAccordion">
+                                <div class="accordion-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3 p-3 bg-light rounded-3">
+                                        <span><strong>Pre-masters in Business Management</strong></span>
+                                        <span class="fee-badge">14,000 GBP</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded-3">
+                                        <span><strong>Pre-masters in Law</strong></span>
+                                        <span class="fee-badge">9,000 GBP</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
