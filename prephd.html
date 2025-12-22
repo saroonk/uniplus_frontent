@@ -10,19 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-        /* Define variables for easy customization */
         :root {
-            --hero-bg-color: #8D7BE9; /* Teal/Blue-Green color from the image */
+            --hero-bg-color: #8D7BE9; 
             --heading-font: 'Fira Sans Condensed', sans-serif;
             --body-font: 'Lexend', sans-serif;
-            --active-tab-color: #8D7BE9; /* Bootstrap blue */
             --text-dark: #212529;
+            --acc-bg: #ffffff;
         }
 
-        /* Base Typography */
         body {
             font-family: var(--body-font);
             color: var(--text-dark);
+            background-color: #fcfcfd;
         }
 
         h1, h2, h3, h4 {
@@ -30,15 +29,15 @@
             font-weight: 700;
         }
 
-        /* --- Hero Section Styling --- */
         .hero-section {
             background-color: var(--hero-bg-color);
             color: white;
-            padding: 6rem 0; /* Generous padding for a strong presence */
+            padding: 10rem 0;
+            
         }
 
         .hero-section h1 {
-            font-size: clamp(2rem, 5vw, 3.8rem); /* Responsive font size */
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 1.5rem;
@@ -49,7 +48,6 @@
             font-weight: 300;
         }
         
-        /* --- Graduate Degrees Section Styling --- */
         .degrees-section {
             padding: 4rem 0;
         }
@@ -65,7 +63,7 @@
             color: var(--text-dark);
             padding: 1.5rem;
             margin-bottom: 3rem;
-            border-radius: 4px;
+            border-radius: 8px;
             display: flex;
             align-items: flex-start;
         }
@@ -77,14 +75,96 @@
             font-weight: bold; 
         }
 
-       
-        
-
         .content-heading {
             font-size: 2rem;
             margin-bottom: 1.5rem;
         }
 
+        /* --- UPDATED ACCORDION STYLING --- */
+        .accordion {
+            --bs-accordion-bg: transparent;
+            --bs-accordion-border-color: transparent;
+        }
+
+        .accordion-item {
+            background-color: var(--acc-bg);
+            border: none !important;
+            margin-bottom: 1rem; /* Slightly reduced margin */
+            border-radius: 12px !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(141, 123, 233, 0.12);
+        }
+
+        .accordion-button {
+            padding: 1.25rem 1.5rem; /* Tightened padding */
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            background-color: transparent !important;
+            border-radius: 12px !important;
+            box-shadow: none !important;
+            font-family: var(--heading-font);
+            /* border: 1px solid red; */
+            margin-bottom: 0px !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: var(--hero-bg-color);
+            /* border: 1px solid yellow; */
+            margin-bottom: 0px !important;
+            /* Removed border-bottom to reduce visual gap */
+        }
+
+        .accordion-body {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: #444;
+            line-height: 1.7;
+            background-color: #fff;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            /* border: 1px solid green; */
+            margin-top: 0px !important;
+        }
+
+        .accordion-body ul {
+            padding-left: 1.2rem;
+            margin-top: 0; /* Ensures list starts immediately */
+        }
+
+        .accordion-body li {
+            margin-bottom: 0.4rem;
+        }
+
+        .fee-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #f0edff;
+            color: var(--hero-bg-color);
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+
+
+        @media (max-width:768px) {
+                    .hero-section {
+          
+            padding: 6rem 0;
+            
+        }
+
+
+                .hero-section p {
+            font-size: 1rem;
+        }
+        
+            
+        }
     </style>
 </head>
 <body>
@@ -93,12 +173,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 text-center">
-                    <h1 class="display-5">
-                       Pre Phd Programs at University
-                    </h1>
-                    <p>
-                        Come and join over 20,000 graduate students from 150+ countries, studying more than 650 Pre Phd Programs.
-                    </p>
+                    <h1 class="display-5">Pre Phd Programs at University</h1>
+                    <p>Come and join over 20,000 graduate students from 150+ countries, studying more than 650 Pre Phd Programs.</p>
                 </div>
             </div>
         </div>
@@ -117,93 +193,109 @@
                         </div>
                     </div>
                     
-                    <!-- <div class="degrees-nav-container">
-                        <button class="degrees-nav-item active">Taught degrees</button>
-                        <button class="degrees-nav-item">Research degrees</button>
-                        <button class="degrees-nav-item">Teacher training</button>
-                    </div> -->
-
                     <h3 class="content-heading">Everything you need to know about Pre Phd degrees</h3>
                     
                     <p>
                         Applying for a PhD course can be a confusing and daunting process. Our three-month course will help to identify a research topic and develop a research proposal which is right for you, and take you step by step through the university application process.
-It will equip you with the academic and research skills which are required to successfully gain a place at university and to embark on your research studies with confidence.
-
+                        It will equip you with the academic and research skills which are required to successfully gain a place at university and to embark on your research studies with confidence.
                     </p>
 
                     <p>
                         The course consists of a series of workshops together with one-to-one sessions. Our tutors have many years of experience in helping students at this level of study and understand exactly what is required for a successful application.
-
                     </p>
 
                     <p>
                         At the end of the programme IFG will supply you with a reference to accompany your application to your chosen university. The reference will comment on your proposal your progress during the course and your ability to articulate your proposal.
-
                     </p>
 
+                    <div class="accordion mt-3" id="programAccordion">
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContent">
+                                    Program Content
+                                </button>
+                            </h2>
+                            <div id="collapseContent" class="accordion-collapse collapse" data-bs-parent="#programAccordion">
+                                <div class="accordion-body">
+                                    The focus of the programme workshops is to take students through the main stages of a PhD application, starting with the research methods required to identify you research topic. This will be followed by an overview of quantitative and qualitative research methods. You will also learn how to bring originality and a new approach to your work. The final workshops will focus on preparing your application and how to present and defend your proposal during a university interview.
+                                </div>
+                            </div>
+                        </div>
 
-                    <h3 class="content-heading">Program Content</h3>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStudy">
+                                    What Will You Study?
+                                </button>
+                            </h2>
+                            <div id="collapseStudy" class="accordion-collapse collapse" data-bs-parent="#programAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Workshop topics include:</strong></p>
+                                    <ul>
+                                        <li>Initial research into universities and suitable research topics</li>
+                                        <li>Literature review searches</li>
+                                        <li>Quantitative and qualitative research methods</li>
+                                        <li>Preparing a qualitative interview checklist</li>
+                                        <li>Preparing a quantitative research survey instrument</li>
+                                        <li>Developing research questions and objectives</li>
+                                        <li>Developing a conceptual framework</li>
+                                        <li>Contribution to knowledge and originality</li>
+                                        <li>Tentative methodology and justification of research design</li>
+                                        <li>Defending your proposal at an interview</li>
+                                        <li>Preparing a PhD application</li>
+                                    </ul>
 
-                    <p>
-                        The focus of the programme workshops is to take students through the main stages of a PhD application, starting with the research methods required to identify you research topic.  This will be followed by an overview of quantitative and qualitative research methods.  You will also learn how to bring originality and a new approach to your work.  The final workshops will focus on preparing your application and how to present and defend your proposal during a university interview.
+                                    <h4 class="my-3">By the end of the course, you will:</h4>
+                                    <ul>
+                                        <li>Have developed your understanding of different aspects of research methods</li>
+                                        <li>Have developed a range of skills to successfully apply for PhD study at universities in different countries</li>
+                                        <li>Have completed an appropriate and viable research proposal</li>
+                                        <li>Be able to defend the proposal at an interview</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                    </p>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFees">
+                                    Fees
+                                </button>
+                            </h2>
+                            <div id="collapseFees" class="accordion-collapse collapse" data-bs-parent="#programAccordion">
+                                <div class="accordion-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span><strong>Pre-PhD Preparation Programme</strong></span>
+                                        <span class="fee-badge">4,000 GBP</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span><strong>Pre-DBA Programme</strong></span>
+                                        <span class="fee-badge">1,420 GBP</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <h3 class="content-heading">What Will You Study?</h3>
-                    <p><strong>Workshop topics include:</strong></p>
-                    <p>Initial research into universities and suitable research topics</p>
-<p>Literature review searches</p>
-<p>Quantitative and qualitative research methods</p>
-<p>Preparing a qualitative interview checklist</p>
-<p>Preparing a quantitative research survey instrument</p>
-<p>Developing research questions and objectives</p>
-<p>Developing a conceptual framework</p>
-<p>Contribution to knowledge and originality</p>
-<p>Tentative methodology and justification of research design</p>
-<p>Defending your proposal at an interview</p>
-<p>Preparing a PhD application</p>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEntry">
+                                    Entry Requirements
+                                </button>
+                            </h2>
+                            <div id="collapseEntry" class="accordion-collapse collapse" data-bs-parent="#programAccordion">
+                                <div class="accordion-body">
+                                    <p>To join the Pre-PhD Preparation Programme, applicants are expected to meet the academic standards typically required for PhD admission at UK universities. These include:</p>
+                                    <ul>
+                                        <li><strong>A relevant Master’s degree</strong> or equivalent postgraduate qualification.</li>
+                                        <li><strong>English language proficiency</strong> at a level equivalent to <strong>IELTS 6.0 or 6.5</strong>.</li>
+                                    </ul>
+                                    <p>These requirements ensure that students entering the programme have the foundational academic and language skills necessary to benefit fully from advanced research training.</p>
+                                </div>
+                            </div>
+                        </div>
 
-
-<h4 class="my-4">By the end of the course, you will:</h4>
-<p>Have developed your understanding of different aspects of research methods</p>
-<p>Have developed a range of skills to successfully apply for PhD study at universities in different countries</p>
-<p>Have completed an appropriate and viable research proposal</p>
-<p>Be able to defend the proposal at an interview</p>
-
-
-
-
-
-
-
-                    <h3 class="content-heading">Fees</h3>
-                    <p><strong>Pre-PhD Preparation Programme</strong> – 4,000 GBP</p>
-<p><strong>Pre-DBA Programme</strong> – 1,420 GBP</p>
-
-
-
-
-                    <h3 class="content-heading">Entry Requirements:</h3>
-                    <p>To join the Pre-PhD Preparation Programme, applicants are expected to meet the academic standards typically required for PhD admission at UK universities. These include:
-</p>
-
-<ul>
-    <li>
-        <strong>A relevant Master’s degree</strong> or an equivalent postgraduate qualification that aligns with the applicant’s intended research area.
-
-         </li>
-         <li><strong>English language proficiency</strong> at a level equivalent to <strong>IELTS 6.0 or 6.5</strong>, or an accepted equivalent test score.
-
-    </li>
-</ul>
-
-<p>These requirements ensure that students entering the programme have the foundational academic and language skills necessary to benefit fully from advanced research training.
-</p>
-
-
-
-
-
+                    </div>
 
                 </div>
             </div>
